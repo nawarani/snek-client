@@ -9,10 +9,10 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Successfully connected to the game server");
     conn.write("Name: SNK");
-  })
+  });
   conn.on("data", (data) => {
     console.log(data);
-  })
+  });
 
   conn.setEncoding("utf8");
   return conn;
